@@ -3,14 +3,22 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
+import { HeaderComponent } from './header/header.component';
+import {FormsModule} from "@angular/forms";
+import { CuriersListComponent } from './curiers-list/curiers-list.component';
+import {DataTableModule} from "angular5-data-table";
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HeaderComponent,
+    CuriersListComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule,
+    DataTableModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
