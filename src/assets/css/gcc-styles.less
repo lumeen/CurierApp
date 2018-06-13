@@ -1,0 +1,720 @@
+@import "./gcc-variables";
+@import "./datatable";
+
+body {
+  background-color: @gray-body-bg-color;
+}
+
+.col-xs-1,
+.col-xs-2,
+.col-xs-3,
+.col-xs-4,
+.col-xs-5,
+.col-xs-6,
+.col-xs-7,
+.col-xs-8,
+.col-xs-9,
+.col-xs-10,
+.col-xs-11,
+.col-xs-12{
+  padding:15px;
+}
+
+.form-control-underline {
+  color: #00263a;
+  padding-left: 0;
+  font-size: 18px;
+  border: 0;
+  border-bottom: 1px solid #a7b3bb;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  transition: border-bottom-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+}
+
+// ========================================
+// 					Buttons
+// ========================================
+
+.btn {
+  border: 0px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 0;
+}
+
+.btn.disabled, .btn[disabled], fieldset[disabled] .btn {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-primary {
+  background-color: @navy-color;
+}
+
+.btn-primary:hover {
+  background-color: @hover-bg-color;
+}
+
+.btn-default.active, .btn-default:active, .btn-default:hover, .open > .dropdown-toggle.btn-default {
+  background-color: @hover-bg-color;
+  color: @hover-font-color;
+}
+
+.fa {
+  min-width: 34px;
+}
+
+.form-control-underline:focus {
+  border: 0;
+  border-bottom: 1px solid #fff200;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.form-control.capsel-datepicker-input {
+  margin-bottom: -10px;
+}
+
+.form-control.k-datepicker {
+  border-radius: 0px;
+  width: 100%;
+  box-sizing: border-box;
+  border-bottom: 1px solid #a7b3bb !important;
+  background-color: inherit;
+}
+
+.form-control.k-datepicker .k-picker-wrap {
+  border-radius: 0px;
+  padding: 0px;
+  text-indent: 0px;
+  box-sizing: border-box;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  border-width: 0px;
+}
+
+.form-control.k-datepicker .k-picker-wrap .k-select {
+  border-style: none;
+  border-width: 0px;
+}
+
+.form-control.k-datepicker .k-autocomplete .k-input,
+.form-control.k-datepicker .k-dropdown-wrap .k-input,
+.form-control.k-datepicker .k-numeric-wrap .k-input,
+.form-control.k-datepicker .k-picker-wrap .k-input,
+.form-control.k-datepicker .k-selectbox .k-input,
+.k-textbox > input {
+  padding: 0px;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  height: auto !important;
+  border-bottom: 1px solid #a7b3bb !important;
+}
+.icons {
+  .btn-default {
+    font-size: 34px;
+    padding: 3px 10px;
+    border-bottom: 2px solid;
+    background-color: @gray-body-bg-color;
+  }
+  .btn:hover{
+    background-color: #005886;
+    color: white;
+  }
+}
+
+.form-control.k-widget :before {
+  box-sizing: border-box;
+}
+
+.form-control.k-datepicker input {
+  text-indent: 0px;
+}
+
+.k-widget.k-calendar {
+  font-size: 14px;
+}
+
+.k-list-container.k-popup {
+  background-color: #fff200;
+}
+
+.form-control.k-dropdown {
+  border-radius: 0px;
+  width: 100%;
+  box-sizing: border-box;
+  border-bottom: 1px solid #a7b3bb !important;
+  background-color: inherit;
+  display: block;
+}
+
+.form-control.k-dropdown:focus {
+  padding-left: 0px;
+}
+
+.form-control.k-dropdown .k-dropdown-wrap {
+  border-radius: 0px;
+  padding: 0px;
+  text-indent: 0px;
+  box-sizing: border-box;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  border-width: 0px;
+}
+
+.form-control.k-dropdown .k-autocomplete .k-input,
+.form-control.k-dropdown .k-dropdown-wrap .k-input,
+.form-control.k-dropdown .k-numeric-wrap .k-input,
+.form-control.k-dropdown .k-picker-wrap .k-input,
+.form-control.k-dropdown .k-selectbox .k-input,
+.k-textbox > input {
+  padding: 0px;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  height: auto !important;
+  border-bottom: 1px solid #a7b3bb !important;
+}
+
+.form-control.k-dropdown .k-dropdown-wrap .k-select {
+  border-style: none;
+  border-width: 0px;
+}
+
+.form-control.k-dropdown .k-input {
+  text-indent: 0px;
+}
+
+.form-control .formly-field-checkbox {
+  min-width: 20px;
+  min-height: 20px;
+  display: none;
+}
+
+.capsel-input-custom-height {
+  height: 32px !important;
+}
+
+.form-control:focus .formly-field-checkbox {
+  display: inline-block;
+  margin-bottom: 5px;
+  position: relative;
+}
+
+.form-control:hover .formly-field-checkbox {
+  display: inline-block;
+  margin-bottom: 5px;
+  position: relative;
+}
+
+.form-control:active .formly-field-checkbox {
+  display: inline-block;
+  margin-bottom: 5px;
+  position: relative;
+}
+
+.form-control .checkbox-label {
+  position: absolute;
+}
+
+.form-control:focus .checkbox-label {
+  margin-left: 10px;
+  box-sizing: border-box;
+}
+
+.form-control:hover .checkbox-label {
+  margin-left: 10px;
+  box-sizing: border-box;
+}
+
+.form-control:active .checkbox-label {
+  margin-left: 10px;
+  box-sizing: border-box;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+div.list-element {
+  -moz-box-sizing: border-box !important;
+  box-sizing: border-box !important;
+  padding: 0px 5px 0px 5px;
+  text-align: center;
+  display: inline-block;
+  width: 50%;
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+
+
+
+// ========================================
+// 			Colors and text formats
+// ========================================
+.default-text-color {
+  color: @navy-color;
+}
+
+
+// ========================================
+// 					Inputs
+// ========================================
+.form-group-underline {
+
+  i.form-control {
+    border: 0;
+    box-shadow: none;
+    outline: none;
+  }
+}
+
+.control-label {
+  color: @label-color;
+  margin-bottom: 0;
+}
+
+.control-label:after {
+  content: ':';
+}
+
+.required:after {
+  content: ': *';
+}
+
+.panel-group {
+  margin-bottom: 0;
+}
+
+.form-control-underline {
+  color: @navy-color;
+  padding-left: 0;
+  font-size: 18px;
+  border: 0;
+  border-bottom: 1px solid @label-color;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  transition: border-bottom-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+
+.form-control-underline:focus {
+  border: 0;
+  border-bottom: 1px solid @yellow-color;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.form-control-underline::-webkit-input-placeholder {
+  color: @border-color;
+}
+
+.form-control-underline:-moz-placeholder {
+  color: @border-color;
+}
+
+.form-control-underline::-moz-placeholder {
+  color: @border-color;
+}
+
+.form-control-underline:-ms-input-placeholder {
+  color: @border-color;
+}
+
+.form-control:focus .input-group-addon {
+  //color: @yellow-color;
+}
+
+// input group addon - icons
+.input-group-addon {
+  background: transparent;
+  font-size: @fa-icon-size;
+}
+
+.control-label {
+  font-size: 12px;
+  font-weight: 500;
+
+}
+
+
+////////////////////////////// formGroup-control /////////////////////////////////
+.form-control {
+  color: @navy-color;
+  background-color: @gray-body-bg-color;
+  padding-left: 0;
+  font-size: 18px;
+  border: 0;
+  border-bottom: 1px solid @label-color;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  transition: border-bottom-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+
+.form-control:focus {
+  border: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  background-color: @yellow-color;
+  padding-left: 10px;
+}
+
+.form-control::-webkit-input-placeholder {
+  color: @border-color;
+}
+
+.form-control:-moz-placeholder {
+  color: @border-color;
+}
+
+.form-control::-moz-placeholder {
+  color: @border-color;
+}
+
+.form-control:-ms-input-placeholder {
+  color: @border-color;
+}
+
+.form-control:focus .input-group-addon {
+  //color: @yellow-color;
+}
+
+select.form-control {
+
+  overflow: hidden;
+  option {
+    background-color: @yellow-color;
+    border: 1px solid @yellow-color;
+    color: @navy-color;
+  }
+
+  option:hover {
+    background-color: @gray-body-bg-color;
+    color: @navy-color;
+    border: none;
+  }
+}
+
+.text-align-right {
+  text-align: right;
+}
+
+
+.dropdown-menu {
+  background-color: @navy-color;
+  li {
+    a {
+      color: #fff;
+      padding: 7px;
+      &:hover {
+        background-color: @yellow-color;
+      }
+    }
+  }
+}
+
+.agreement-actions.dropdown-menu {
+  left: -200%;
+}
+
+//////////////////////////////////////////// radio /////////////////////////////////
+label {
+  font-weight: normal;
+}
+
+//.horizontal {
+//  float: left;
+//  display: inline-block;
+//}
+
+.radio {
+  padding-left: 0;
+  padding-right: 10px;
+  label {
+    padding-left: 0;
+  }
+}
+
+.radio-inline-field {
+  height: 40px;
+}
+
+.radio-inline + .radio-inline {
+  margin-top: 10px;
+}
+
+.capsel-radio {
+  margin-left: 3px;
+}
+
+.radio input[type=radio] {
+  float: left;
+  clear: none;
+  margin: 2px 0 0 2px;
+}
+
+
+.radio input[type=radio]:checked:after {
+  background-color: @yellow-color;
+  width: @radio-radius;
+  height: @radio-radius;
+  border-radius: @radio-radius;
+  top: -4px;
+  left: -4px;
+  position: relative;
+  content: '';
+  display: inline-block;
+  visibility: visible;
+  border: 4px solid @light-gray-color;
+}
+
+///////////////////////////////////////// checkbox //////////////////////////////////////
+
+.checkbox input[type=checkbox], .checkbox-inline input[type=checkbox], .radio input[type=radio], .radio-inline input[type=radio] {
+  position: static;
+  margin-right: 12px;
+  //margin-left: -16px;
+}
+
+.checkbox input[type=checkbox][disabled]:after, .checkbox-inline input[type=checkbox][disabled]:after, .radio input[type=radio][disabled]:after, .radio-inline input[type=radio][disabled]:after {
+  background-color: lighten(@light-gray-color, 15%);
+}
+
+input[type=checkbox] {
+  width: auto;
+}
+
+.checkbox label:before {
+  border-radius: 3px;
+}
+
+.language-selector-checkbox .checkbox input[type=checkbox]:after {
+  right: 5px;
+}
+
+.checkbox-small label:before {
+  border-radius: 3px;
+}
+
+.checkbox-small input[type=checkbox] {
+  position: static;
+  margin-right: 12px;
+}
+
+.checkbox-small input[type=checkbox][disabled]:after {
+  background-color: lighten(@light-gray-color, 15%);
+}
+
+///////////////////////////////////////// select //////////////////////////////////////
+
+.capsel-select {
+  position: relative;
+  select {
+    box-shadow: none;
+    background: transparent;
+    background-image: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    outline: 0;
+    position: relative;
+    padding-bottom: 0;
+
+    // IE 10,11
+    &::-ms-expand {
+      display: none;
+    }
+  }
+
+}
+
+///////////////////////////////////////// datepicker //////////////////////////////////////
+.capsel-datepicker {
+  position: relative;
+
+  .invalid-date {
+    background-color: @pink-color;
+    color: #fff;
+  }
+}
+
+
+
+// ========================================
+// 					Modal
+// ========================================
+
+.modal-lg {
+  @media (min-width: 1200px) {
+    width: 1170px;
+  }
+}
+
+.form-popup-body {
+  min-height: 540px;
+  padding: 20px;
+}
+
+.multiselect {
+  .overSelect {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+  }
+
+  .select-box {
+    position: relative;
+    select {
+      width: 100%;
+    }
+  }
+
+  .select-checkboxes {
+    position: absolute;
+    z-index: 1;
+    width: 91%;
+    overflow-y: scroll;
+    height: 350px;
+
+    .checkbox {
+      margin: 0;
+      background-color: @yellow-color;
+      padding: 9px;
+
+    }
+  }
+}
+
+.input-dropdown {
+  .overSelect {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+  }
+
+  .select-box {
+    position: relative;
+    select {
+      width: 100%;
+    }
+  }
+
+  .dropdown {
+    position: absolute;
+    z-index: 1;
+    width: 103%;
+    overflow-y: scroll;
+    font-size: 18px;
+    max-height: 150px;
+    right: 14px;
+    cursor: default;
+
+    .option, .option:hover {
+      margin: 0;
+      height: 27px;
+      padding: 3px 1px 3px 9px;
+    }
+
+    .option {
+      background-color: @yellow-color;
+    }
+
+    .option:hover {
+      background-color: @hover-bg-color;
+      color: #fff;
+    }
+  }
+
+  .input-dropdown-loader {
+    right: 44px;
+  }
+
+  .input-dropdown-arrow {
+    top: 30px;
+    right: 18px;
+    position: absolute;
+  }
+
+}
+
+.formly-field-checkbox.readonly {
+  margin-right: 20px;
+}
+
+.checkbox input[type=checkbox], .checkbox-inline input[type=checkbox], .radio input[type=radio], .radio-inline input[type=radio] {
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.checkbox label, .checkbox-inline, .radio label, .radio-inline {
+  padding-left: 0;
+}
+
+input, p, textarea {
+  &.readonly {
+    padding-left: 10px;
+    background-color: @read-only-gray-color;
+    overflow: hidden;
+  }
+}
+
+textarea.readonly {
+  padding-left: 10px;
+}
+
+/* ################# CONTENT ########################*/
+.content {
+  margin-left: 70px;
+  height: 100%;
+  margin-right: 20px;
+  background-color: @gray-body-bg-color;
+  margin-bottom: 40px;
+  padding-top:15px !important;
+}
+
+input.has-error {
+  background-color: #ffcfcf;
+  border: 1px solid #e4a5a0;
+  color: #961967;
+
+}
+
+.validation-message{
+  color: red;
+}
+
+.warning-message{
+  color: rgb(179, 182, 20);
+}
+
+.simple-notification .sn-content {
+  margin: 0;
+  font-size: 16px;
+  padding: 0 50px 0 0;
+  line-height: 20px;
+}
+
+.jaspero__confirmation_dialog {
+  max-width: 500px !important;
+  position: relative !important;
+  top: 40% !important;
+}
+
+div.audit {
+  color: red;
+}
+
+

@@ -1,15 +1,62 @@
-<data-table id="my-table"
 
-            [title]="'Employees'"
-            [items]="items"
-            [itemCount]="itemCount">
-  <data-table-column
-    [property]="'name'"
-    [header]="'name'">
-  </data-table-column>
-  <data-table-column
-    [property]="'surname'"
-    [header]="'surname'">
-  </data-table-column>
-</data-table>
+
+    <ngx-datatable
+      class="bootstrap"
+      [rows]="items"
+      [count]="1"
+
+      [limit]="4"
+      [columnMode]="'force'"
+      [headerHeight]="50"
+      [footerHeight]="50"
+      [rowHeight]="'auto'"
+      [externalPaging]="true"
+      [externalSorting]="false">
+      <ngx-datatable-column prop="name" [maxWidth]="800" [sortable]="false">
+        <ng-template let-column="name"  ngx-datatable-header-template>
+          <span>Name</span>
+        </ng-template>
+        <ng-template let-value="value" ngx-datatable-cell-template>
+          {{ value }}
+        </ng-template>
+      </ngx-datatable-column>
+      <ngx-datatable-column prop="surname" [maxWidth]="800" [sortable]="false">
+        <ng-template let-column="column"  ngx-datatable-header-template>
+          <span >Nazwisko</span>
+        </ng-template>
+        <ng-template let-value="value" ngx-datatable-cell-template>
+          {{ value }}
+        </ng-template>
+      </ngx-datatable-column>
+      <ngx-datatable-footer>
+        <ng-template
+          ngx-datatable-footer-template
+          let-rowCount="rowCount"
+          let-pageSize="pageSize"
+          let-selectedCount="selectedCount"
+          let-curPage="currrentPage"
+          let-offset="offset">
+          <div style="padding: 5px 10px">
+            <div id="info">
+            </div>
+          </div>
+          <datatable-pager
+            [pagerLeftArrowIcon]="'datatable-icon-left'"
+            [pagerRightArrowIcon]="'datatable-icon-right'"
+            [pagerPreviousIcon]="'datatable-icon-prev'"
+            [pagerNextIcon]="'datatable-icon-skip'"
+            [page]=""
+            [size]="pageSize"
+            [count]="rowCount">
+          </datatable-pager>
+          <div style="float: right">
+          <span>
+          <input id='pagerInput' type="text"/> &nbsp;
+          </span>
+
+          </div>
+        </ng-template>
+      </ngx-datatable-footer>
+    </ngx-datatable>
+
 
